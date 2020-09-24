@@ -1,32 +1,35 @@
 <template>
-  <ion-page class="ion-padding">
-    <ion-grid class="overview-wrapper">
-      <ion-row>
-        <ion-col class="overview">Overview</ion-col>
-        <ion-col>
-          <ion-icon :icon="add" class="overview-add"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <CardWallet :data="cards" />
-
-    <SectionDivider data="Expenses" />
+  <ion-page>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title slot="start" class="sign-out">Sign Out</ion-title>
+        <ion-title slot="start" class="logo">GlobalOne</ion-title>
+        <!-- <img src="assets/img/logo.png" /> -->
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon :icon="ellipsisVertical"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
 
     <RecentList :data="recentList" />
 
+    <SectionDivider data="Favourites" />
+
     <QuickActions />
+    <Tabs />
   </ion-page>
 </template>
 
 <script>
-import { IonPage, IonGrid, IonRow, IonCol, IonIcon } from "@ionic/vue";
-import { add } from "ionicons/icons";
+import { IonPage, IonToolbar, IonHeader, IonTitle, IonButtons, IonButton, IonIcon } from "@ionic/vue";
+import { add, grid, menu, ellipsisVertical, shield, statsChart, repeat, refresh } from "ionicons/icons";
 
-import SectionDivider from "../components/SectionDivider";
-import CardWallet from "../components/CardWallet";
 import RecentList from "../components/RecentList";
 import QuickActions from "../components/QuickActions";
+import SectionDivider from "../components/SectionDivider";
+import Tabs from "../components/Tabs";
 
 export default {
   name: "home",
@@ -34,18 +37,27 @@ export default {
   requiresAuth: false,
   components: {
     IonPage,
-    IonGrid,
-    IonRow,
-    IonCol,
+    IonToolbar, 
+    IonTitle, 
+    IonButtons, 
+    IonButton,
     IonIcon,
-    SectionDivider,
-    CardWallet,
     RecentList,
+    IonHeader,
     QuickActions,
+    SectionDivider,
+    Tabs
   },
   setup() {
     return {
-      add
+      add,
+      menu,
+      grid,
+      ellipsisVertical,
+      shield, 
+      statsChart, 
+      repeat, 
+      refresh
     }
   },
   data() {
@@ -72,28 +84,32 @@ export default {
       ],
       recentList: [
         {
-          name: "Themna Makwa",
-          icon: "person",
-          cost: "19.30",
-          date: "12 Aug 2020, 03:23 am",
+          name: "Savings Account",
+          cost: "R3 400",
+          description: "Available Balance",
+          icon: repeat,
+          color: "#36AEEA"
         },
         {
-          name: "Tami Muthambi",
-          icon: "person",
-          cost: "6.09",
-          date: "10 Aug 2020, 13:40 pm",
+          name: "December Holiday",
+          cost: "R7 350",
+          description: "Available Balance",
+          icon: statsChart,
+          color: "#226391"
         },
         {
-          name: "Gary Goat",
-          icon: "person",
-          cost: "19.30",
-          date: "12 Aug 2020, 03:23 am",
+          name: "Funeral Plan",
+          cost: "12 340",
+          description: "",
+          icon: shield,
+          color: "#797A7C"
         },
         {
-          name: "Jackie Chan",
-          icon: "person",
-          cost: "6.09",
-          date: "10 Aug 2020, 13:40 pm",
+          name: "Credit Card",
+          cost: "R8 800",
+          description: "",
+          icon: refresh,
+          color: "#D8373F"
         },
       ],
     };
@@ -103,21 +119,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.overview-wrapper {
-  margin-bottom: 10px;
+ion-toolbar {
+  --background: #144d75;
+  color: #ffffff;
 }
 
-.overview {
-  font-size: 20px;
-  font-weight: 600;
+ion-title.sign-out {
+  font-size: 17px;
 }
 
-.overview-add {
-  background: #ffffff;
-  padding: 0px;
-  border-radius: 10px;
-  color: #000;
-  float: right;
-  font-size: 28px;
+ion-title.logo {
+  font-weight: 900;
+  font-size: 25px;
 }
 </style>

@@ -18,6 +18,8 @@
 
 <style>
 .section-divider {
-  margin: 20px 0 0 15px;
+  margin: 10px 0 0 10px;
+  font-weight: 500;
+  color: #3e3d3d;
 }
 </style>
