@@ -18,6 +18,7 @@
     <SectionDivider data="Favourites" />
 
     <QuickActions />
+    
     <Tabs />
   </ion-page>
 </template>

@@ -9,7 +9,7 @@
         <p>{{ item.description }}</p>
       </ion-label>
       <ion-text class="cost">
-        <b>R {{ item.cost }}</b>
+        <b>{{ item.cost }}</b>
       </ion-text>
       <ion-icon class="right-icons" :icon="chevronForward"  slot="end"></ion-icon>
     </ion-item>
