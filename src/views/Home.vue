@@ -2,14 +2,19 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title slot="start" class="sign-out">Sign Out</ion-title>
-        <ion-title slot="start" class="logo">GlobalOne</ion-title>
-        <!-- <img src="assets/img/logo.png" /> -->
-        <ion-buttons slot="end">
-          <ion-button>
-            <ion-icon :icon="ellipsisVertical"></ion-icon>
+        <ion-buttons slot="start">
+          <ion-button class="sign-out">
+            Sign Out
           </ion-button>
         </ion-buttons>
+
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon class="ellipsis" :icon="ellipsisVertical"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-title class="logo">GlobalOne</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -24,7 +29,7 @@
 </template>
 
 <script>
-import { IonPage, IonToolbar, IonHeader, IonTitle, IonButtons, IonButton, IonIcon } from "@ionic/vue";
+import { IonPage, IonToolbar, IonHeader, IonButtons, IonButton, IonIcon } from "@ionic/vue";
 import { add, grid, menu, ellipsisVertical, shield, statsChart, repeat, refresh } from "ionicons/icons";
 
 import RecentList from "../components/RecentList";
@@ -39,7 +44,6 @@ export default {
   components: {
     IonPage,
     IonToolbar, 
-    IonTitle, 
     IonButtons, 
     IonButton,
     IonIcon,
@@ -105,10 +109,17 @@ ion-toolbar {
   color: #ffffff;
 }
 
-ion-title.sign-out {
+ion-button.sign-out {
   font-size: 17px;
+  font-weight: 500;
+  margin-left: 5px;
+  float: left;
+  --color: #ffffff;
 }
 
+.ellipsis {
+  color: #ffffff;
+}
 ion-title.logo {
   font-weight: 900;
   font-size: 25px;
