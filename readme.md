@@ -3,7 +3,7 @@
 
 Hybrid mobile template built with ([latest](https://ionicframework.com/blog/announcing-the-new-ionic-vue-beta/)) vue-ionic and using capacitor for native builds - These templates are from app design inspiration pages on Instagram or Dribble.
 
-Template is inspitred by the new Capitec Bank app. Capitec is one of the largest banks in South Africa. It provides personal banking services through its 1000-plus branches across the country. For this template the focus is on the general look and feel.
+Template is inspired by the new Capitec Bank app. Capitec is one of the largest banks in South Africa. It provides personal banking services through its 1000-plus branches across the country. For this template the focus is on the general look and feel.
 
 [Demo](https://ionic-vue-mobile-template-04.netlify.app)
 
