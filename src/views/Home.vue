@@ -18,7 +18,7 @@
     <SectionDivider data="Favourites" />
 
     <QuickActions />
-    
+
     <Tabs />
   </ion-page>
 </template>
@@ -63,26 +63,6 @@ export default {
   },
   data() {
     return {
-      cards: [
-        {
-          cardNumber: "4524 3428 898 239",
-          balance: "12 354.05",
-          accountName: "Savings",
-          expDate: "02/2020",
-        },
-        {
-          cardNumber: "9483 2394 8987 8391",
-          balance: "1435.20",
-          accountName: "Savings",
-          expDate: "06/2024",
-        },
-        {
-          cardNumber: "3079 485 2395 3944",
-          balance: "8 200",
-          accountName: "Savings",
-          expDate: "08/2022",
-        },
-      ],
       recentList: [
         {
           name: "Savings Account",
@@ -100,7 +80,7 @@ export default {
         },
         {
           name: "Funeral Plan",
-          cost: "12 340",
+          cost: "R12 340",
           description: "",
           icon: shield,
           color: "#797A7C"
