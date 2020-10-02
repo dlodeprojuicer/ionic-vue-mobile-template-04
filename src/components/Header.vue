@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { IonToolbar, IonHeader, IonButtons, IonButton, IonIcon } from "@ionic/vue";
+import { IonToolbar, IonHeader, IonButtons, IonButton, IonIcon, IonTitle } from "@ionic/vue";
 import { ellipsisVertical } from "ionicons/icons";
 
 export default {
@@ -31,7 +31,7 @@ export default {
 			default: () => []
 		}
   },
-  components: { IonToolbar, IonHeader, IonButtons, IonButton, IonIcon },
+  components: { IonToolbar, IonHeader, IonButtons, IonButton, IonIcon, IonTitle },
   setup() {
     return {
       ellipsisVertical

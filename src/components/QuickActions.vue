@@ -64,6 +64,70 @@
         </p>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="peopleOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Pay beneficiary
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="bulbOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Buy electricity
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+    </ion-row>
+        <ion-row>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="peopleOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Pay beneficiary
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="bulbOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Buy electricity
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+    </ion-row>
+        <ion-row>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="peopleOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Pay beneficiary
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="bulbOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Buy electricity
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+    </ion-row>
+        <ion-row>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="peopleOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Pay beneficiary
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+      <ion-col class="ion-activatable ripple-parent">
+        <ion-icon :icon="bulbOutline" class="btn-icon"></ion-icon>
+        <p class="text">
+          Buy electricity
+          <ion-ripple-effect></ion-ripple-effect>
+        </p>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </template>
 

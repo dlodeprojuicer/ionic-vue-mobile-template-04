@@ -1,19 +1,19 @@
 <template>
   <ion-page>
     <Header />
+    <ion-content>
+      <RecentList :data="recentList" />
 
-    <RecentList :data="recentList" />
+      <SectionDivider data="Favourites" />
 
-    <SectionDivider data="Favourites" />
-
-    <QuickActions />
-
+      <QuickActions />
+    </ion-content>
     <Tabs />
   </ion-page>
 </template>
 
 <script>
-import { IonPage } from "@ionic/vue";
+import { IonPage, IonContent } from "@ionic/vue";
 import { add, grid, menu, shield, statsChart, repeat, refresh } from "ionicons/icons";
 
 import Header from "../components/Header";
@@ -32,7 +32,8 @@ export default {
     RecentList,
     QuickActions,
     SectionDivider,
-    Tabs
+    Tabs,
+    IonContent
   },
   setup() {
     return {
