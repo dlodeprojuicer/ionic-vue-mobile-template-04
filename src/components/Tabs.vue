@@ -1,43 +1,41 @@
 <template>
-  <ion-page>
-      <ion-tabs>
-        <ion-tab-bar slot="bottom">
-          <ion-tab-button>
-            <ion-icon :icon="homeOutline" />
-            <span>Home</span>
-          </ion-tab-button>
-            
-          <ion-tab-button>
-            <ion-icon :icon="readerOutline" />
-            <span>Cards</span>
-          </ion-tab-button>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button>
+        <ion-icon :icon="homeOutline" />
+        <span>Home</span>
+      </ion-tab-button>
+        
+      <ion-tab-button>
+        <ion-icon :icon="readerOutline" />
+        <span>Cards</span>
+      </ion-tab-button>
 
-          <ion-tab-button>
-            <ion-icon :icon="repeatOutline" />
-            <span>Transact</span>
-          </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon :icon="repeatOutline" />
+        <span>Transact</span>
+      </ion-tab-button>
 
-          <ion-tab-button>
-            <ion-icon :icon="chatboxEllipsesOutline" />
-            <span>Messages</span>
-          </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon :icon="chatboxEllipsesOutline" />
+        <span>Messages</span>
+      </ion-tab-button>
 
-          <ion-tab-button>
-            <ion-icon :icon="listOutline" />
-            <span>Explore</span>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
-  </ion-page>
+      <ion-tab-button>
+        <ion-icon :icon="listOutline" />
+        <span>Explore</span>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </template>
 
 <script lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonIcon, IonPage } from '@ionic/vue';
+import { IonTabBar, IonTabButton, IonTabs, IonIcon } from '@ionic/vue';
 import { homeOutline, readerOutline, chatboxEllipsesOutline, listOutline, repeatOutline, notifications } from 'ionicons/icons';
 
 export default {
   name: 'Tabs',
-  components: { IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
+  components: { IonTabs, IonTabBar, IonTabButton, IonIcon },
   setup() {
     return {
       homeOutline, 

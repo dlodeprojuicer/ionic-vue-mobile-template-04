@@ -1,14 +1,13 @@
 <template>
   <ion-page>
-    <Header />
     <ion-content>
+    <Header />
       <RecentList :data="recentList" />
 
       <SectionDivider data="Favourites" />
 
       <QuickActions />
     </ion-content>
-    <Tabs />
   </ion-page>
 </template>
 
@@ -20,7 +19,6 @@ import Header from "../components/Header";
 import RecentList from "../components/RecentList";
 import QuickActions from "../components/QuickActions";
 import SectionDivider from "../components/SectionDivider";
-import Tabs from "../components/Tabs";
 
 export default {
   name: "home",
@@ -32,7 +30,6 @@ export default {
     RecentList,
     QuickActions,
     SectionDivider,
-    Tabs,
     IonContent
   },
   setup() {
