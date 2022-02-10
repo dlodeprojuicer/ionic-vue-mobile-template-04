@@ -19,7 +19,7 @@
     "chart.js": "^2.9.3",
     "core-js": "^3.6.5",
     "ionic-vue-form": "^1.2.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "sass-loader": "^10.0.2",
     "vue": "3.0.0",
     "vue-chartjs": "^3.5.1",
