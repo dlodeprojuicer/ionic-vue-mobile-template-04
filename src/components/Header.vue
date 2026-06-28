@@ -18,26 +18,13 @@
     </ion-header>
 </template>
 
-<script>
+<script setup lang="ts">
 import { IonToolbar, IonHeader, IonButtons, IonButton, IonIcon, IonTitle } from "@ionic/vue";
 import { ellipsisVertical } from "ionicons/icons";
 
-export default {
-  name: "recent-list",
-  props: {
-		data: {
-			type: Array,
-			required: true,
-			default: () => []
-		}
-  },
-  components: { IonToolbar, IonHeader, IonButtons, IonButton, IonIcon, IonTitle },
-  setup() {
-    return {
-      ellipsisVertical
-    }
-  },
-}
+defineOptions({
+  name: "AppHeader"
+});
 </script>
 
 <style lang="scss" scoped>

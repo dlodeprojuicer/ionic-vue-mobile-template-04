@@ -1,7 +1,7 @@
 <template>
   <ion-page>
     <ion-content>
-    <Header />
+      <Header />
       <RecentList :data="recentList" />
 
       <SectionDivider data="Favourites" />
@@ -11,72 +11,55 @@
   </ion-page>
 </template>
 
-<script>
+<script setup lang="ts">
 import { IonPage, IonContent } from "@ionic/vue";
-import { add, grid, menu, shield, statsChart, repeat, refresh } from "ionicons/icons";
+import { shield, statsChart, repeat, refresh } from "ionicons/icons";
 
-import Header from "../components/Header";
-import RecentList from "../components/RecentList";
-import QuickActions from "../components/QuickActions";
-import SectionDivider from "../components/SectionDivider";
+import Header from "../components/Header.vue";
+import RecentList from "../components/RecentList.vue";
+import QuickActions from "../components/QuickActions.vue";
+import SectionDivider from "../components/SectionDivider.vue";
 
-export default {
-  name: "home",
-  title: "Home",
-  requiresAuth: false,
-  components: {
-    IonPage,
-    Header,
-    RecentList,
-    QuickActions,
-    SectionDivider,
-    IonContent
+defineOptions({
+  name: "HomePage"
+});
+
+interface RecentItem {
+  name: string;
+  cost: string;
+  description: string;
+  icon: string;
+  color: string;
+}
+
+const recentList: RecentItem[] = [
+  {
+    name: "Savings Account",
+    cost: "R3 400",
+    description: "Available Balance",
+    icon: repeat,
+    color: "#36AEEA"
   },
-  setup() {
-    return {
-      add,
-      menu,
-      grid,
-      shield, 
-      statsChart, 
-      repeat, 
-      refresh
-    }
+  {
+    name: "December Holiday",
+    cost: "R7 350",
+    description: "Available Balance",
+    icon: statsChart,
+    color: "#226391"
   },
-  data() {
-    return {
-      recentList: [
-        {
-          name: "Savings Account",
-          cost: "R3 400",
-          description: "Available Balance",
-          icon: repeat,
-          color: "#36AEEA"
-        },
-        {
-          name: "December Holiday",
-          cost: "R7 350",
-          description: "Available Balance",
-          icon: statsChart,
-          color: "#226391"
-        },
-        {
-          name: "Funeral Plan",
-          cost: "R12 340",
-          description: "",
-          icon: shield,
-          color: "#797A7C"
-        },
-        {
-          name: "Credit Card",
-          cost: "R8 800",
-          description: "",
-          icon: refresh,
-          color: "#D8373F"
-        },
-      ],
-    };
+  {
+    name: "Funeral Plan",
+    cost: "R12 340",
+    description: "",
+    icon: shield,
+    color: "#797A7C"
   },
-  methods: {},
-};
+  {
+    name: "Credit Card",
+    cost: "R8 800",
+    description: "",
+    icon: refresh,
+    color: "#D8373F"
+  },
+];
 </script>

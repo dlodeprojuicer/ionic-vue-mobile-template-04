@@ -16,26 +16,21 @@
   </ion-list>
 </template>
 
-<script>
+<script setup lang="ts">
 import { IonList, IonItem, IonLabel, IonText, IonIcon } from "@ionic/vue";
 import { chevronForward } from "ionicons/icons";
 
-export default {
-  name: "recent-list",
-  props: {
-		data: {
-			type: Array,
-			required: true,
-			default: () => []
-		}
-  },
-  components: { IonList, IonItem, IonLabel, IonText, IonIcon },
-  setup() {
-    return {
-      chevronForward
-    }
-  },
+interface RecentItem {
+  name: string;
+  cost: string;
+  description: string;
+  icon: string;
+  color: string;
 }
+
+defineProps<{
+  data: RecentItem[];
+}>();
 </script>
 
 <style lang="scss" scoped>

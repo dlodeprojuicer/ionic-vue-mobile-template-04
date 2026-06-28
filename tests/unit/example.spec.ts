@@ -1,12 +1,14 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import SectionDivider from '@/components/SectionDivider.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg }
+describe('SectionDivider.vue', () => {
+  it('renders the divider text', () => {
+    const wrapper = shallowMount(SectionDivider, {
+      props: {
+        data: 'Recent activity'
+      }
     })
-    expect(wrapper.text()).toMatch(msg)
+
+    expect(wrapper.text()).toMatch('Recent activity')
   })
 })

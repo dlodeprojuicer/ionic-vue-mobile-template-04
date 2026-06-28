@@ -35,23 +35,9 @@
   </ion-grid>
 </template>
 
-<script>
+<script setup lang="ts">
 import { IonGrid, IonRow, IonCol, IonIcon, IonRippleEffect } from "@ionic/vue";
 import { phonePortraitSharp, swapHorizontal, bulbOutline, peopleOutline } from "ionicons/icons";
-
-export default {
-  name: "quick-actions",
-  components: { IonGrid, IonRow, IonCol, IonIcon, IonRippleEffect },
-  setup() {
-    return {
-      phonePortraitSharp,
-      swapHorizontal,
-      bulbOutline,
-      peopleOutline
-    };
-  },
-  methods: {},
-};
 </script>
 
 <style lang="scss" scoped>

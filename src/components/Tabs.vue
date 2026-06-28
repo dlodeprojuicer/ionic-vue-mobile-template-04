@@ -1,27 +1,29 @@
 <template>
   <ion-tabs>
+    <ion-router-outlet />
+
     <ion-tab-bar slot="bottom">
-      <ion-tab-button>
+      <ion-tab-button tab="home" href="/">
         <ion-icon :icon="homeOutline" />
         <span>Home</span>
       </ion-tab-button>
         
-      <ion-tab-button>
+      <ion-tab-button tab="cards">
         <ion-icon :icon="readerOutline" />
         <span>Cards</span>
       </ion-tab-button>
 
-      <ion-tab-button>
+      <ion-tab-button tab="transact">
         <ion-icon :icon="repeatOutline" />
         <span>Transact</span>
       </ion-tab-button>
 
-      <ion-tab-button>
+      <ion-tab-button tab="messages">
         <ion-icon :icon="chatboxEllipsesOutline" />
         <span>Messages</span>
       </ion-tab-button>
 
-      <ion-tab-button>
+      <ion-tab-button tab="explore">
         <ion-icon :icon="listOutline" />
         <span>Explore</span>
       </ion-tab-button>
@@ -29,24 +31,13 @@
   </ion-tabs>
 </template>
 
-<script lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonIcon } from '@ionic/vue';
-import { homeOutline, readerOutline, chatboxEllipsesOutline, listOutline, repeatOutline, notifications } from 'ionicons/icons';
+<script setup lang="ts">
+import { IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, IonIcon } from '@ionic/vue';
+import { homeOutline, readerOutline, chatboxEllipsesOutline, listOutline, repeatOutline } from 'ionicons/icons';
 
-export default {
-  name: 'Tabs',
-  components: { IonTabs, IonTabBar, IonTabButton, IonIcon },
-  setup() {
-    return {
-      homeOutline, 
-      repeatOutline, 
-      notifications,
-      readerOutline,
-      chatboxEllipsesOutline,
-      listOutline
-    }
-  }
-}
+defineOptions({
+  name: "AppTabs"
+});
 </script>
 
 <style lang="scss" scoped>
